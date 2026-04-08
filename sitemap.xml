@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://blog.andrewr.online/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>https://blog.andrewr.online/</loc>
+</url>
+<url>
+<loc>https://blog.andrewr.online/the-bounding-box-problem-why-your-illustrator-layouts-waste-space-and-how-to-fix-it.html</loc>
+<lastmod>2026-04-08T22:09:18+05:00</lastmod>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-202559.png</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-014803-1.png</image:loc>
+<image:title><![CDATA[A demonstration of standard rectangular bounding boxes in Adobe Illustrator. Three vector objects—a desk, a lounge chair, and a street lamp—are shown inside pink rectangles, highlighting the large amount of wasted empty space that traditional alignment tools cannot utilize.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-014802.png</image:loc>
+<image:title><![CDATA[A side-by-side comparison of vector furniture icons in Adobe Illustrator. The left side shows standard arrangement with wasted space, while the right side demonstrates Arrange Master's Dense Packing algorithm interlocking objects tightly.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-014646.png</image:loc>
+<image:title><![CDATA[Comparison of a sticker sheet layout in Illustrator. The left image shows arrangement based on bounding boxes with large gaps. The right image shows True-Shape Nesting where irregular shapes fit into each other, leaving more free space at the bottom of the sheet.]]></image:title>
+</image:image>
+</url>
+</urlset>
