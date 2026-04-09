@@ -3,7 +3,7 @@
     <title>Andrew R. Tools Official Blog</title>
     <link href="https://blog.andrewr.online/feed.xml" rel="self" />
     <link href="https://blog.andrewr.online" />
-    <updated>2026-04-08T22:09:18+05:00</updated>
+    <updated>2026-04-09T21:09:06+05:00</updated>
     <author>
         <name>Andrew R.</name>
     </author>
@@ -26,16 +26,16 @@
             <summary type="html">
                 <![CDATA[
                         <img src="https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-202559.png" alt="" />
-                    The struggle is real. If you’ve ever tried to arrange complex, organic shapes in Adobe Illustrator, you know the frustration. You select a group of objects, hit "Align," and... nothing happens as expected. The reason? The Bounding Box. The Invisible Barrier Standard bounding boxes. Each&hellip;
+                    The struggle is real. If you’ve ever tried to arrange complex, organic shapes in Adobe Illustrator, you know the frustration. You select a group of objects, hit "Align," and... nothing happens as expected. The reason? The Bounding Box. By default, Illustrator sees every object as&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <p><img src="https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-202559.png" class="type:primaryImage" alt="" /></p>
                 
-    <h4 id="the-struggle-is-real-if-youve-ever-tried-to-arrange-complex-organic-shapes-in-adobe-illustrator-you-know-the-frustration-you-select-a-group-of-objects-hit-align-and-nothing-happens-as-expected-the-reason-the-bounding-boxlessbrgreater">
-      The struggle is real. If you’ve ever tried to arrange complex, organic shapes in Adobe Illustrator, you know the frustration. You select a group of objects, hit "Align," and... nothing happens as expected. The reason? The Bounding Box.<br>
-    </h4>
+  <p id="the-struggle-is-real-if-youve-ever-tried-to-arrange-complex-organic-shapes-in-adobe-illustrator-you-know-the-frustration-you-select-a-group-of-objects-hit-align-and-nothing-happens-as-expected-the-reason-the-bounding-boxlessbrgreater">
+    The struggle is real. If you’ve ever tried to arrange complex, organic shapes in Adobe Illustrator, you know the frustration. You select a group of objects, hit "Align," and... nothing happens as expected. The reason? The Bounding Box.<br>
+  </p>
 
     <h3 id="the-invisible-barrier">
       The Invisible Barrier
