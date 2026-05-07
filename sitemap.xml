@@ -5,10 +5,38 @@
 <loc>https://blog.andrewr.online/</loc>
 </url>
 <url>
-<loc>https://blog.andrewr.online/the-bounding-box-problem-why-your-illustrator-layouts-waste-space-and-how-to-fix-it.html</loc>
-<lastmod>2026-04-09T21:09:06+05:00</lastmod>
+<loc>https://blog.andrewr.online/automate-sticker-sheet-layouts-illustrator.html</loc>
+<lastmod>2026-05-07T22:32:21+05:00</lastmod>
 <image:image>
-<image:loc>https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-202559.png</image:loc>
+<image:loc>https://blog.andrewr.online/media/posts/3/Snimok-ekrana-2026-04-27-230542.png</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/3/Snimok-ekrana-2026-05-07-214928.png</image:loc>
+<image:title><![CDATA[Technical comparison in Illustrator: Bounding box nesting vs. True-Shape Nesting showing superior material utilization and higher density with the latter.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/3/Snimok-ekrana-2026-05-07-221310.png</image:loc>
+<image:title><![CDATA[Side-by-side view of disorganized vector sticker items and an empty rectangular path acting as the boundary container for the nesting algorithm.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/3/tab-greedy-2.png</image:loc>
+<image:title><![CDATA[Arrange Master plugin interface in Adobe Illustrator showing Greedy Layout settings with Dense Packing and Free Rotation enabled during a transformation session.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/3/documentation_screenshot_017.png</image:loc>
+<image:title><![CDATA[Automated production prep: The Prepress Splitter script redistributes components from nested groups into dedicated CUT, PRINT, and MARKS layers for RIP software compatibility.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/3/Snimok-ekrana-2026-05-06-004402.png</image:loc>
+<image:title><![CDATA[Automated separation of print artwork and die-cut lines into different Illustrator layers using the Prepress Splitter script.]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://blog.andrewr.online/the-bounding-box-problem-why-your-illustrator-layouts-waste-space-and-how-to-fix-it.html</loc>
+<lastmod>2026-05-07T22:31:04+05:00</lastmod>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-05-07-202430.png</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 <image:image>
@@ -16,11 +44,11 @@
 <image:title><![CDATA[A demonstration of standard rectangular bounding boxes in Adobe Illustrator. Three vector objects—a desk, a lounge chair, and a street lamp—are shown inside pink rectangles, highlighting the large amount of wasted empty space that traditional alignment tools cannot utilize.]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-014802.png</image:loc>
-<image:title><![CDATA[A side-by-side comparison of vector furniture icons in Adobe Illustrator. The left side shows standard arrangement with wasted space, while the right side demonstrates Arrange Master's Dense Packing algorithm interlocking objects tightly.]]></image:title>
+<image:loc>https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-05-07-213305.png</image:loc>
+<image:title><![CDATA[A side-by-side comparison of vector letters in Adobe Illustrator. The left side shows standard arrangement with wasted space, while the right side demonstrates Arrange Master's Dense Packing algorithm interlocking objects tightly.]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-014646.png</image:loc>
+<image:loc>https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-05-07-212823.png</image:loc>
 <image:title><![CDATA[Comparison of a sticker sheet layout in Illustrator. The left image shows arrangement based on bounding boxes with large gaps. The right image shows True-Shape Nesting where irregular shapes fit into each other, leaving more free space at the bottom of the sheet.]]></image:title>
 </image:image>
 </url>

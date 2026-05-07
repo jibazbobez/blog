@@ -3,12 +3,102 @@
     <title>Andrew R. Tools Official Blog</title>
     <link href="https://blog.andrewr.online/feed.xml" rel="self" />
     <link href="https://blog.andrewr.online" />
-    <updated>2026-04-09T21:09:06+05:00</updated>
+    <updated>2026-05-07T22:32:21+05:00</updated>
     <author>
         <name>Andrew R.</name>
     </author>
     <id>https://blog.andrewr.online</id>
 
+    <entry>
+        <title>How to Automate Sticker Pack Layouts in Adobe Illustrator Under 2 Minutes</title>
+        <author>
+            <name>Andrew R.</name>
+        </author>
+        <link href="https://blog.andrewr.online/automate-sticker-sheet-layouts-illustrator.html"/>
+        <id>https://blog.andrewr.online/automate-sticker-sheet-layouts-illustrator.html</id>
+        <media:content url="https://blog.andrewr.online/media/posts/3/Snimok-ekrana-2026-04-27-230542.png" medium="image" />
+            <category term="Tutorial"/>
+            <category term="Nesting"/>
+            <category term="Arrange Master"/>
+            <category term="Adobe Illustrator"/>
+
+        <updated>2026-05-07T20:04:51+05:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://blog.andrewr.online/media/posts/3/Snimok-ekrana-2026-04-27-230542.png" alt="" />
+                    Preparing a sticker pack for print involves two main costs: the designer's time spent arranging the assets and the physical material used during production. Manual arrangement is inefficient. Designers typically drag and drop individual vector groups to fit an artboard, adjusting spacing by eye. This&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://blog.andrewr.online/media/posts/3/Snimok-ekrana-2026-04-27-230542.png" class="type:primaryImage" alt="" /></p>
+                <p class="ng-star-inserted"><span class="ng-star-inserted">Preparing a sticker pack for print involves two main costs: the designer's time spent arranging the assets and the physical material used during production.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Manual arrangement is inefficient. Designers typically drag and drop individual vector groups to fit an artboard, adjusting spacing by eye. This process takes time and almost always leaves usable material empty. This article explains how to automate the sticker layout process in Adobe Illustrator using true-shape nesting algorithms.</span></p>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">The Problem with Standard Alignment Tools</span></h3>
+<p class="ng-star-inserted"><span class="ng-star-inserted">The core issue with manual layout or standard Illustrator distribution tools (like the Align panel) is the reliance on bounding boxes.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">A bounding box is a rectangular frame that encompasses the widest and tallest points of a vector object. When you use default distribution scripts, the software calculates the distance between these rectangular frames, not the actual shapes.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">If you are printing circular, diagonal, or irregular stickers, bounding box alignment treats the empty space around the sticker as solid matter. This prevents objects from interlocking, resulting in significant material waste on the final vinyl sheet.</span></p>
+<figure class="post__image post__image--center"><figure class="post__image post__image--center"><img loading="lazy"  src="https://blog.andrewr.online/media/posts/3/Snimok-ekrana-2026-05-07-214928.png" alt="Technical comparison in Illustrator: Bounding box nesting vs. True-Shape Nesting showing superior material utilization and higher density with the latter." width="1741" height="1100" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-07-214928-xs.png 640w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-07-214928-sm.png 768w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-07-214928-md.png 1024w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-07-214928-lg.png 1366w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-07-214928-xl.png 1600w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-07-214928-2xl.png 1920w"></figure>
+<figcaption><span class="ng-star-inserted">A side-by-side comparison. Left: Irregular stickers arranged based on their bounding boxes pushing them apart. Right: The same stickers interlocking tightly, ignoring the bounding box limits.</span></figcaption>
+</figure>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">The Solution: True-Shape Nesting</span></h3>
+<p class="ng-star-inserted"><span class="ng-star-inserted">To optimize material usage, the layout method must analyze the actual vector contours of the artwork. This approach is called True-Shape Nesting.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">The </span><strong class="ng-star-inserted"><span class="ng-star-inserted"><a href="https://andrewr.online/arrangemaster/" target="_blank" rel="noopener noreferrer">Arrange Master</a></span></strong><span class="ng-star-inserted"> plugin for Adobe Illustrator includes a Dense Packing algorithm built specifically for this task. Instead of reading rectangular frames, the algorithm scans the physical vector paths, detects internal cavities, and evaluates multiple rotation angles to pack the objects as tightly as possible.</span></p>
+<p><span class="ng-star-inserted"><span class="ng-star-inserted">Arrange Master is a commercial plugin, but a <a href="https://andrewr.online/arrangemaster/demo.html"></a><a href="https://andrewr.online/arrangemaster/demo.html" target="_blank" rel="noopener noreferrer">free demo version</a> is available for evaluation. You can also observe the Dense Packing algorithm's real-time performance by viewing the dedicated video demonstration:</span></span></p>
+<figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/a91jQegMMCY" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Here is the automated workflow for generating a print-ready sticker pack.</span></p>
+<h4 class="ng-star-inserted"><span class="ng-star-inserted">Step 1: Prepare the Vector Groups</span></h4>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Before running any automation, ensure your file is structured correctly for a print-and-cut workflow. Each individual sticker must be grouped. A standard sticker group should contain:</span></p>
+<ol class="ng-star-inserted">
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">The raster or vector artwork (the print layer).</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">The die-cut line (usually a specific spot color stroke).</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">The white offset or bleed area.</span></p>
+</li>
+</ol>
+<h4 class="ng-star-inserted"><span class="ng-star-inserted">Step 2: Define the Container</span></h4>
+<figure class="post__image post__image--center"><img loading="lazy" src="https://blog.andrewr.online/media/posts/3/Snimok-ekrana-2026-05-07-221310.png" alt="Side-by-side view of disorganized vector sticker items and an empty rectangular path acting as the boundary container for the nesting algorithm." width="1570" height="732" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-07-221310-xs.png 640w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-07-221310-sm.png 768w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-07-221310-md.png 1024w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-07-221310-lg.png 1366w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-07-221310-xl.png 1600w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-07-221310-2xl.png 1920w">
+<figcaption>Initial document state: a collection of irregular items (left) and the target rectangular container (right) representing the physical print media.</figcaption>
+</figure>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Draw a single rectangle on your artboard that represents your physical print media (for example, an A4 sheet or a 12x12 inch vinyl square). Arrange Master identifies the largest object in your selection and automatically assigns it as the boundary container.</span></p>
+<h4 class="ng-star-inserted"><span class="ng-star-inserted">Step 3: Execute the Dense Packing Algorithm</span></h4>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Select your container rectangle and all the sticker groups you want to pack.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Open the Arrange Master panel (Window &gt; Extensions &gt; Arrange Master) and navigate to the </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Greedy Layout</span></strong><span class="ng-star-inserted"> tab. Configure the following parameters:</span></p>
+<ul class="ng-star-inserted">
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Dense Packing:</span></strong><span class="ng-star-inserted"> Enable this checkbox to activate true-shape vector analysis.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Min. Spacing:</span></strong><span class="ng-star-inserted"> Set this to your required safety margin (e.g., </span><span class="inline-code ng-star-inserted">2mm</span><span class="ng-star-inserted">). This ensures the plotter blade has enough room to cut without damaging adjacent stickers.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Free Rotation:</span></strong><span class="ng-star-inserted"> Enable this to allow the engine to test 24 different angles per object to find the most efficient fit.</span></p>
+</li>
+</ul>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Click </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Arrange</span></strong><span class="ng-star-inserted">. The plugin creates a temporary session, hiding your original files and processing duplicates. The algorithm places large objects first to build the structure, then fills the remaining gaps with smaller stickers.</span></p>
+<figure class="post__image post__image--center"><img loading="lazy" src="https://blog.andrewr.online/media/posts/3/tab-greedy-2.png" alt="Arrange Master plugin interface in Adobe Illustrator showing Greedy Layout settings with Dense Packing and Free Rotation enabled during a transformation session." width="370" height="594" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/3/responsive/tab-greedy-2-xs.png 640w ,https://blog.andrewr.online/media/posts/3/responsive/tab-greedy-2-sm.png 768w ,https://blog.andrewr.online/media/posts/3/responsive/tab-greedy-2-md.png 1024w ,https://blog.andrewr.online/media/posts/3/responsive/tab-greedy-2-lg.png 1366w ,https://blog.andrewr.online/media/posts/3/responsive/tab-greedy-2-xl.png 1600w ,https://blog.andrewr.online/media/posts/3/responsive/tab-greedy-2-2xl.png 1920w">
+<figcaption><span class="ng-star-inserted">The Arrange Master interface during a nesting operation. Parameters like </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Dense Packing</span></strong><span class="ng-star-inserted"> and </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Free Rotation</span></strong><span class="ng-star-inserted"> are active, with the status bar reflecting the real-time RLE Math Engine calculation.</span></figcaption>
+</figure>
+<p class="ng-star-inserted"><span class="ng-star-inserted">If you are satisfied with the density, click </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Ok</span></strong><span class="ng-star-inserted"> to finalize the layout. If you want a different configuration, click </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Randomize</span></strong><span class="ng-star-inserted"> to force the algorithm to recalculate a new pattern.</span></p>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">Prepress Layer Separation</span></h3>
+<p class="ng-star-inserted"><span class="ng-star-inserted">A packed layout is only half of the job. Most commercial RIP software requires the cutlines and the printable artwork to exist on strictly separate layers.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Manually extracting the cutline from hundreds of nested groups is prone to human error. To handle this, use the </span><strong class="ng-star-inserted"><span class="ng-star-inserted"><a href="https://andrewr.online/arrangemaster/assets/downloads/Prepress-Splitter.jsx" target="_blank" rel="noopener noreferrer">Prepress Splitter</a></span></strong><span class="ng-star-inserted"> script (distributed with Arrange Master plugin).</span></p>
+<figure class="post__image post__image--center"><img loading="lazy" src="https://blog.andrewr.online/media/posts/3/documentation_screenshot_017.png" alt="Automated production prep: The Prepress Splitter script redistributes components from nested groups into dedicated CUT, PRINT, and MARKS layers for RIP software compatibility." width="1465" height="1000" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/3/responsive/documentation_screenshot_017-xs.png 640w ,https://blog.andrewr.online/media/posts/3/responsive/documentation_screenshot_017-sm.png 768w ,https://blog.andrewr.online/media/posts/3/responsive/documentation_screenshot_017-md.png 1024w ,https://blog.andrewr.online/media/posts/3/responsive/documentation_screenshot_017-lg.png 1366w ,https://blog.andrewr.online/media/posts/3/responsive/documentation_screenshot_017-xl.png 1600w ,https://blog.andrewr.online/media/posts/3/responsive/documentation_screenshot_017-2xl.png 1920w">
+<figcaption>Prepress Splitter script dialog in Adobe Illustrator configured to separate nested vector components into production-ready layers.</figcaption>
+</figure>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Select your newly nested layout and run the script (</span><span class="inline-code ng-star-inserted">File &gt; Scripts &gt; Prepress-Splitter.jsx</span><span class="ng-star-inserted">). The script analyzes the Z-order of every nested group. It extracts the top vector paths (cutlines) and moves them to a dedicated "CUT" layer, while moving the raster and base vector elements to a "PRINT" layer.</span></p>
+<figure class="post__image post__image--center"><figure class="post__image post__image--center"><img loading="lazy"  src="https://blog.andrewr.online/media/posts/3/Snimok-ekrana-2026-05-06-004402.png" alt="Automated separation of print artwork and die-cut lines into different Illustrator layers using the Prepress Splitter script." width="2294" height="1053" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-06-004402-xs.png 640w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-06-004402-sm.png 768w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-06-004402-md.png 1024w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-06-004402-lg.png 1366w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-06-004402-xl.png 1600w ,https://blog.andrewr.online/media/posts/3/responsive/Snimok-ekrana-2026-05-06-004402-2xl.png 1920w"></figure>
+<figcaption><em><span class="ng-star-inserted">Separated layers named "CUT" (containing vector paths), "PRINT" (containing artwork) and "QR" (for variable data and QR code) generated by the script.</span></em></figcaption>
+</figure>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">Summary</span></h3>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Switching from manual alignment to algorithmic true-shape nesting changes the economics of sticker production. By defining a container and letting the Dense Packing engine analyze the vector paths, you eliminate manual dragging. Setting a precise "Min. Spacing" value guarantees safe plotter cuts, while the optimized density directly reduces the linear footage of vinyl required per batch.</span></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>The Bounding Box Problem: Why Your Illustrator Layouts Waste Space and How to Fix It</title>
         <author>
@@ -16,7 +106,7 @@
         </author>
         <link href="https://blog.andrewr.online/the-bounding-box-problem-why-your-illustrator-layouts-waste-space-and-how-to-fix-it.html"/>
         <id>https://blog.andrewr.online/the-bounding-box-problem-why-your-illustrator-layouts-waste-space-and-how-to-fix-it.html</id>
-        <media:content url="https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-202559.png" medium="image" />
+        <media:content url="https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-05-07-202430.png" medium="image" />
             <category term="Tutorial"/>
             <category term="Nesting"/>
             <category term="Arrange Master"/>
@@ -25,13 +115,13 @@
         <updated>2026-04-07T22:31:21+05:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-202559.png" alt="" />
+                        <img src="https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-05-07-202430.png" alt="" />
                     The struggle is real. If you’ve ever tried to arrange complex, organic shapes in Adobe Illustrator, you know the frustration. You select a group of objects, hit "Align," and... nothing happens as expected. The reason? The Bounding Box. By default, Illustrator sees every object as&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-202559.png" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-05-07-202430.png" class="type:primaryImage" alt="" /></p>
                 
   <p id="the-struggle-is-real-if-youve-ever-tried-to-arrange-complex-organic-shapes-in-adobe-illustrator-you-know-the-frustration-you-select-a-group-of-objects-hit-align-and-nothing-happens-as-expected-the-reason-the-bounding-boxlessbrgreater">
     The struggle is real. If you’ve ever tried to arrange complex, organic shapes in Adobe Illustrator, you know the frustration. You select a group of objects, hit "Align," and... nothing happens as expected. The reason? The Bounding Box.<br>
@@ -57,12 +147,12 @@
     </h3>
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-014802.png" height="882" width="1644" alt="A side-by-side comparison of vector furniture icons in Adobe Illustrator. The left side shows standard arrangement with wasted space, while the right side demonstrates Arrange Master's Dense Packing algorithm interlocking objects tightly."  sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-04-08-014802-xs.png 640w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-04-08-014802-sm.png 768w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-04-08-014802-md.png 1024w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-04-08-014802-lg.png 1366w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-04-08-014802-xl.png 1600w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-04-08-014802-2xl.png 1920w">
-      <figcaption>Standard alignment vs. Dense Packing: How Arrange Master utilizes the negative space between objects to create a tighter, more professional layout.</figcaption>
+      <img loading="lazy" src="https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-05-07-213305.png" height="1134" width="1585" alt="A side-by-side comparison of vector letters in Adobe Illustrator. The left side shows standard arrangement with wasted space, while the right side demonstrates Arrange Master's Dense Packing algorithm interlocking objects tightly."  sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-05-07-213305-xs.png 640w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-05-07-213305-sm.png 768w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-05-07-213305-md.png 1024w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-05-07-213305-lg.png 1366w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-05-07-213305-xl.png 1600w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-05-07-213305-2xl.png 1920w">
+      <figcaption>Standard alignment vs. Dense Packing: How Arrange Master utilizes the negative space between letters to create a tighter, more dense layout.</figcaption>
     </figure>
 
   <p>
-    This is exactly why we built the <strong>Arrange Master v1.2.2</strong> engine. Instead of relying on the bounding box, our custom RLE Math Engine "sees" the actual vector paths.
+    This is exactly why we built the <strong>Arrange Master</strong>&nbsp;engine. Instead of relying on the bounding box, our custom RLE Math Engine "sees" the actual vector paths.
 <br>
 <br>Here is what happens when you switch to algorithmic nesting:
 <br><strong>1. Contour Hugging:</strong> Objects physically interlock, filling the negative space of adjacent items.
@@ -76,7 +166,7 @@
     </h3>
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-04-08-014646.png" height="1084" width="1126" alt="Comparison of a sticker sheet layout in Illustrator. The left image shows arrangement based on bounding boxes with large gaps. The right image shows True-Shape Nesting where irregular shapes fit into each other, leaving more free space at the bottom of the sheet."  sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-04-08-014646-xs.png 640w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-04-08-014646-sm.png 768w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-04-08-014646-md.png 1024w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-04-08-014646-lg.png 1366w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-04-08-014646-xl.png 1600w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-04-08-014646-2xl.png 1920w">
+      <img loading="lazy" src="https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-05-07-212823.png" height="1114" width="1222" alt="Comparison of a sticker sheet layout in Illustrator. The left image shows arrangement based on bounding boxes with large gaps. The right image shows True-Shape Nesting where irregular shapes fit into each other, leaving more free space at the bottom of the sheet."  sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-05-07-212823-xs.png 640w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-05-07-212823-sm.png 768w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-05-07-212823-md.png 1024w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-05-07-212823-lg.png 1366w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-05-07-212823-xl.png 1600w ,https://blog.andrewr.online/media/posts/1/responsive/Snimok-ekrana-2026-05-07-212823-2xl.png 1920w">
       <figcaption>True-Shape Nesting (right) analyzes actual vector paths instead of rectangular bounding boxes (left), saving up to 30% of space on your print sheets.</figcaption>
     </figure>
 
