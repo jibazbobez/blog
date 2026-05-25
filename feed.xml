@@ -3,7 +3,7 @@
     <title>Andrew R. Tools Official Blog</title>
     <link href="https://blog.andrewr.online/feed.xml" rel="self" />
     <link href="https://blog.andrewr.online" />
-    <updated>2026-05-25T08:07:23+05:00</updated>
+    <updated>2026-05-25T08:24:20+05:00</updated>
     <author>
         <name>Andrew R.</name>
     </author>
@@ -83,7 +83,7 @@
 <p class="ng-star-inserted"><span class="ng-star-inserted">Use </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Pathfinder &gt; Merge</span></strong><span class="ng-star-inserted"> to merge the traced results into a single solid silhouette.</span></p>
 </li>
 <li class="ng-star-inserted">
-<p class="ng-star-inserted"><span class="ng-star-inserted">Place the original raster image inside this new vector silhouette using </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Object &gt; Make Clipping Mask</span></strong><span class="ng-star-inserted">.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Place the original raster image inside this new vector silhouette using </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Object &gt; Clipping Mask &gt; Make</span></strong><span class="ng-star-inserted">.</span></p>
 </li>
 </ol>
 <figure class="post__image"><figure class="post__image"><img loading="lazy"  src="https://blog.andrewr.online/media/posts/5/Snimok-ekrana-2026-05-25-064658.png" alt="Creating a vector silhouette from a raster image for True-Shape nesting in Illustrator." width="1786" height="707" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/5/responsive/Snimok-ekrana-2026-05-25-064658-xs.png 640w ,https://blog.andrewr.online/media/posts/5/responsive/Snimok-ekrana-2026-05-25-064658-sm.png 768w ,https://blog.andrewr.online/media/posts/5/responsive/Snimok-ekrana-2026-05-25-064658-md.png 1024w ,https://blog.andrewr.online/media/posts/5/responsive/Snimok-ekrana-2026-05-25-064658-lg.png 1366w ,https://blog.andrewr.online/media/posts/5/responsive/Snimok-ekrana-2026-05-25-064658-xl.png 1600w ,https://blog.andrewr.online/media/posts/5/responsive/Snimok-ekrana-2026-05-25-064658-2xl.png 1920w"></figure>
