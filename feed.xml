@@ -3,12 +3,72 @@
     <title>Andrew R. Tools Official Blog</title>
     <link href="https://blog.andrewr.online/feed.xml" rel="self" />
     <link href="https://blog.andrewr.online" />
-    <updated>2026-05-25T08:24:20+05:00</updated>
+    <updated>2026-06-01T23:10:41+05:00</updated>
     <author>
         <name>Andrew R.</name>
     </author>
     <id>https://blog.andrewr.online</id>
 
+    <entry>
+        <title>Arrange Master 1.3.1: Automating Prepress with Multi-Layer Retention</title>
+        <author>
+            <name>Andrew R.</name>
+        </author>
+        <link href="https://blog.andrewr.online/arrange-master-131-illustrator-prepress-automation.html"/>
+        <id>https://blog.andrewr.online/arrange-master-131-illustrator-prepress-automation.html</id>
+        <media:content url="https://blog.andrewr.online/media/posts/6/Layer-21.png" medium="image" />
+
+        <updated>2026-06-01T22:11:21+05:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://blog.andrewr.online/media/posts/6/Layer-21.png" alt="" />
+                    Prepress workflows in Adobe Illustrator have a persistent bottleneck: the layer dilemma. When preparing files for print and cut, designers must keep PRINT, CUT, OR and MARKS on strictly separated layers. However, standard nesting scripts require users to group these elements beforehand to move them together. This manual&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://blog.andrewr.online/media/posts/6/Layer-21.png" class="type:primaryImage" alt="" /></p>
+                <p class="ng-star-inserted"><span class="ng-star-inserted">Prepress workflows in Adobe Illustrator have a persistent bottleneck: the layer dilemma. When preparing files for print and cut, designers must keep </span><span class="inline-code ng-star-inserted">PRINT</span><span class="ng-star-inserted">, </span><span class="inline-code ng-star-inserted">CUT</span><span class="ng-star-inserted">, OR and </span><span class="inline-code ng-star-inserted">MARKS</span><span class="ng-star-inserted"> on strictly separated layers. However, standard nesting scripts require users to group these elements beforehand to move them together. This manual grouping destroys the layer hierarchy, requiring hours of manual sorting after the layout is generated.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted"><a href="https://andrewr.online/arrangemaster/" target="_blank" rel="noopener noreferrer">Arrange Master v1.3.1</a> eliminates this conflict. The new update allows true-shape nesting without altering your original layer structure.</span></p>
+<figure class="post__image"><img loading="lazy" src="https://blog.andrewr.online/media/posts/6/Snimok-ekrana-2026-06-01-224118.png" alt="Adobe Illustrator layers panel demonstrating Multi-Layer Retention in Arrange Master 1.3.1" width="1586" height="1110" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/6/responsive/Snimok-ekrana-2026-06-01-224118-xs.png 640w ,https://blog.andrewr.online/media/posts/6/responsive/Snimok-ekrana-2026-06-01-224118-sm.png 768w ,https://blog.andrewr.online/media/posts/6/responsive/Snimok-ekrana-2026-06-01-224118-md.png 1024w ,https://blog.andrewr.online/media/posts/6/responsive/Snimok-ekrana-2026-06-01-224118-lg.png 1366w ,https://blog.andrewr.online/media/posts/6/responsive/Snimok-ekrana-2026-06-01-224118-xl.png 1600w ,https://blog.andrewr.online/media/posts/6/responsive/Snimok-ekrana-2026-06-01-224118-2xl.png 1920w">
+<figcaption><span class="ng-star-inserted">Left side: prior versions. Right side: Arrange Master 1.3.1 and neatly separated layers intact.</span></figcaption>
+</figure>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">Multi-Layer Retention via Auto-Clustering</span></h3>
+<p class="ng-star-inserted"><span class="ng-star-inserted">The core of the 1.3.1 update is the </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Auto-Clustering</span></strong><span class="ng-star-inserted"> system. This system bridges the gap between layout automation and file organization.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Arrange Master analyzes the center of mass of your selected objects. If paths intersect- for example, a cut contour overlapping a printed graphic and a QR code - the algorithm binds them into a temporary cluster. The nesting engine calculates the optimal placement using these clusters.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">When you click </span><span class="inline-code ng-star-inserted">Ok</span><span class="ng-star-inserted"> to finalize the session, the plugin reads the initial metadata and returns every individual path to its original layer. The result is a dense, nested layout where print data and cut paths remain perfectly separated.</span></p>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">DOM Processing Optimization</span></h3>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Processing large-scale print runs requires efficient memory management. For version 1.3.1, we rewrote the Adobe Illustrator DOM (Document Object Model) interaction cycles.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">When generating layouts for 1000+ elements, the session completion commands (</span><span class="inline-code ng-star-inserted">Ok</span><span class="ng-star-inserted"> and </span><span class="inline-code ng-star-inserted">Cancel</span><span class="ng-star-inserted">) execute significantly faster. By minimizing read/write requests to the Illustrator API, the plugin prevents application freezes during the final object placement phase.</span></p>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">Version Comparison Summary</span></h3>
+<p class="ng-star-inserted"><span class="ng-star-inserted">The table below outlines the architectural shifts between versions:</span></p>
+<div class="table-container ng-star-inserted">
+<table>
+<tbody>
+<tr class="table-header ng-star-inserted">
+<td class="ng-star-inserted"><span class="ng-star-inserted">Capability</span></td>
+<td class="ng-star-inserted"><span class="ng-star-inserted">Prior Versions</span></td>
+<td class="ng-star-inserted"><span class="ng-star-inserted">Arrange Master v1.3.1</span></td>
+</tr>
+<tr class="ng-star-inserted">
+<td class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Layer Structure</span></strong></td>
+<td class="ng-star-inserted"><span class="ng-star-inserted">Required manual grouping and re-sorting</span></td>
+<td class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Full Multi-Layer Retention (Auto-layers)</span></strong></td>
+</tr>
+<tr class="ng-star-inserted">
+<td class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">DOM Performance</span></strong></td>
+<td class="ng-star-inserted"><span class="ng-star-inserted">Slower termination on 500+ objects</span></td>
+<td class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Optimized cycles for 1000+ objects</span></strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">Get the Update</span></h3>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Stop rebuilding your Illustrator layers after every layout iteration. Arrange Master v1.3.1 provides the density of algorithmic nesting while respecting the strict layer requirements of modern prepress standards.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">If you already own a license, this update is free. For new users, Arrange Master is available as a <a href="https://app.lava.top/products/17f31a30-2b04-4c7e-8adf-f4e28ef8a0be" target="_blank" rel="noopener noreferrer">one-time purchase with a lifetime license</a>.</span></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>How to Save Material and Time in Wide-Format Printing</title>
         <author>
