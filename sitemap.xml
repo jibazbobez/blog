@@ -6,7 +6,7 @@
 </url>
 <url>
 <loc>https://blog.andrewr.online/arrange-master-131-illustrator-prepress-automation.html</loc>
-<lastmod>2026-06-01T23:10:41+05:00</lastmod>
+<lastmod>2026-06-29T19:12:30+05:00</lastmod>
 <image:image>
 <image:loc>https://blog.andrewr.online/media/posts/6/Layer-21.png</image:loc>
 <image:title><![CDATA[]]></image:title>
@@ -118,6 +118,42 @@
 <image:image>
 <image:loc>https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-05-07-212823.png</image:loc>
 <image:title><![CDATA[Comparison of a sticker sheet layout in Illustrator. The left image shows arrangement based on bounding boxes with large gaps. The right image shows True-Shape Nesting where irregular shapes fit into each other, leaving more free space at the bottom of the sheet.]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://blog.andrewr.online/vector-gravity-and-genetic-packing-inside-arrange-master-14.html</loc>
+<lastmod>2026-06-29T19:29:07+05:00</lastmod>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/7/Snimok-ekrana-2026-06-29-192855.png</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/7/documentation_screenshot_024.png</image:loc>
+<image:title><![CDATA[UI comparison showing the Arrange Master Adobe Illustrator plugin interface evolution from version 1.0 to version 1.4, highlighting new vector gravity controls.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/7/screenshot_016.png</image:loc>
+<image:title><![CDATA[High-density true-shape nesting of irregular black vector paths achieved using the genetic algorithm in the Arrange Master 1.4 plugin.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/7/documentation_screenshot_022.png</image:loc>
+<image:title><![CDATA[Comparison matrix illustrating how X and Y vector gravity controls and evolutionary generations optimize nesting density in Arrange Master.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/7/Snimok-ekrana-2026-06-29-184838.png</image:loc>
+<image:title><![CDATA[The Arrange Master plugin interface showing a live progress bar and an active Cancel button during asynchronous layout processing.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/7/documentation_screenshot_012.png</image:loc>
+<image:title><![CDATA[A dense print-ready sticker sheet containing 296 complex objects nested tightly using the Greedy layout engine in Adobe Illustrator.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/7/demo-ui.png</image:loc>
+<image:title><![CDATA[The modern CEP panel interface of the Arrange Master demo version, displaying layout tools and settings inside Adobe Illustrator.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/7/documentation_screenshot_023.png</image:loc>
+<image:title><![CDATA[]]></image:title>
 </image:image>
 </url>
 </urlset>
