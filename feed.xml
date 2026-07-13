@@ -3,7 +3,7 @@
     <title>Andrew R. Tools Official Blog</title>
     <link href="https://blog.andrewr.online/feed.xml" rel="self" />
     <link href="https://blog.andrewr.online" />
-    <updated>2026-07-13T21:33:51+05:00</updated>
+    <updated>2026-07-13T21:48:28+05:00</updated>
     <author>
         <name>Andrew R.</name>
     </author>
@@ -65,7 +65,7 @@
 <figcaption>Precise cut lines generated for plotter or CNC cutting.</figcaption>
 </figure>
 <p class="ng-star-inserted"><span class="ng-star-inserted">Following the layout process, the included <a href="https://andrewr.online/arrangemaster/documentation.html#prepress-splitter" target="_blank" rel="noopener noreferrer">Prepress Splitter script</a> separates the layers. It automatically moves clipping masks to a dedicated CUT layer for CNC/Laser Cutting Preparation, leaving the artwork isolated on the PRINT layer.</span></p>
-<p class="ng-star-inserted"><span class="ng-star-inserted">Arrange Master supports arranging complex multi-layer designs (such as files divided into <strong>CUT, PRINT, MARKS</strong>, etc.) without flattening your layer hierarchy.adobe-illustrator-nesting-script-alternative<br></span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Arrange Master supports arranging complex multi-layer designs (such as files divided into <strong>CUT, PRINT, MARKS</strong>, etc.) without flattening your layer hierarchy.<br></span></p>
 <ul class="ng-star-inserted">
 <li class="ng-star-inserted">
 <p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Manual Workflow:</span></strong><span class="ng-star-inserted"> Approximately 1 hour for tight manual packing and layer sorting.</span></p>
