@@ -3,12 +3,171 @@
     <title>Andrew R. Tools Official Blog</title>
     <link href="https://blog.andrewr.online/feed.xml" rel="self" />
     <link href="https://blog.andrewr.online" />
-    <updated>2026-08-06T03:22:10+05:00</updated>
+    <updated>2026-08-16T16:26:50+05:00</updated>
     <author>
         <name>Andrew R.</name>
     </author>
     <id>https://blog.andrewr.online</id>
 
+    <entry>
+        <title>Cut-Line Preparation and True-Shape Nesting in Adobe Illustrator</title>
+        <author>
+            <name>Andrew R.</name>
+        </author>
+        <link href="https://blog.andrewr.online/cut-line-preparation-true-shape-nesting-illustrator.html"/>
+        <id>https://blog.andrewr.online/cut-line-preparation-true-shape-nesting-illustrator.html</id>
+        <media:content url="https://blog.andrewr.online/media/posts/10/Snimok-ekrana-2026-08-16-161448.png" medium="image" />
+            <category term="Tutorial"/>
+            <category term="TrueShapeNesting"/>
+            <category term="Arrange Master"/>
+            <category term="Adobe Illustrator"/>
+
+        <updated>2026-08-16T10:21:15+05:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://blog.andrewr.online/media/posts/10/Snimok-ekrana-2026-08-16-161448.png" alt="" />
+                    Preparing files for wide-format printing, CNC machining, or laser cutting requires separation of print data and cutting contours. Manual file preparation across multiple layers is prone to human error and consumes production time. This tutorial details the technical prepress workflow using Arrange Master, a professional Adobe&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://blog.andrewr.online/media/posts/10/Snimok-ekrana-2026-08-16-161448.png" class="type:primaryImage" alt="" /></p>
+                <p class="ng-star-inserted"><span class="ng-star-inserted">Preparing files for wide-format printing, CNC machining, or laser cutting requires separation of print data and cutting contours. Manual file preparation across multiple layers is prone to human error and consumes production time.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">This tutorial details the technical prepress workflow using </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Arrange Master</span></strong><span class="ng-star-inserted">, a professional Adobe Illustrator plugin. The workflow covers cut-line generation, algorithmic true-shape nesting, and automated layer distribution using the included Prepress Splitter script.</span></p>
+<h2 class="ng-star-inserted"><span class="ng-star-inserted">Phase 1: Generating Cut-Lines</span></h2>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Before executing any nesting algorithm, every asset requires a defined vector boundary. The production hardware (plotters, CNC routers) reads this boundary to execute the physical cut.</span></p>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">Vector Objects</span></h3>
+<figure class="post__image"><figure class="post__image"><img loading="lazy"  src="https://blog.andrewr.online/media/posts/10/Snimok-ekrana-2026-08-16-153900.png" alt="Vector text in Adobe Illustrator converted into a cut contour using Offset Path with a magenta stroke." width="1952" height="380" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-153900-xs.png 640w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-153900-sm.png 768w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-153900-md.png 1024w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-153900-lg.png 1366w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-153900-xl.png 1600w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-153900-2xl.png 1920w"></figure>
+<figcaption>Generating a vector cut contour using Offset Path and Pathfinder tools.</figcaption>
+</figure>
+<p class="ng-star-inserted"><span class="ng-star-inserted">If your artwork consists of vector paths:</span></p>
+<ol class="ng-star-inserted">
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">Select the vector group.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">Navigate to </span><span class="inline-code ng-star-inserted">Object &gt; Path &gt; Offset Path</span><span class="ng-star-inserted">. Enter your required bleed value (e.g., </span><span class="inline-code ng-star-inserted">2 mm</span><span class="ng-star-inserted">) and set Joins to </span><span class="inline-code ng-star-inserted">Round</span><span class="ng-star-inserted">.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">Open the </span><span class="inline-code ng-star-inserted">Pathfinder</span><span class="ng-star-inserted"> panel and click </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Unite</span></strong><span class="ng-star-inserted"> to merge the offset paths into a single solid silhouette.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">Remove the fill and apply a 1pt stroke. Assign a Spot Color (e.g., 100% Magenta named "CutContour") to this stroke.</span></p>
+</li>
+</ol>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">Raster Objects (PNG, JPG, TIFF)</span></h3>
+<figure class="post__image"><figure class="post__image"><img loading="lazy"  src="https://blog.andrewr.online/media/posts/10/Snimok-ekrana-2026-08-16-153920.png" alt="Raster star graphic converted into a vector cut contour using Image Trace and Offset Path in Adobe Illustrator." width="1964" height="513" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-153920-xs.png 640w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-153920-sm.png 768w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-153920-md.png 1024w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-153920-lg.png 1366w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-153920-xl.png 1600w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-153920-2xl.png 1920w"></figure>
+<figcaption>Extracting cut lines from a raster object using Image Trace, path expansion, and offset boundary generation.</figcaption>
+</figure>
+<p class="ng-star-inserted"><span class="ng-star-inserted">If your artwork is a raster image without transparency data formatted for Illustrator:</span></p>
+<ol class="ng-star-inserted">
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">Select the raster image.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">Open the </span><span class="inline-code ng-star-inserted">Image Trace</span><span class="ng-star-inserted"> panel (</span><span class="inline-code ng-star-inserted">Window &gt; Image Trace</span><span class="ng-star-inserted">). Set the preset to </span><span class="inline-code ng-star-inserted">Silhouettes</span><span class="ng-star-inserted"> and adjust the </span><span class="inline-code ng-star-inserted">Threshold</span><span class="ng-star-inserted"> until the contour matches the object boundaries.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">Click </span><span class="inline-code ng-star-inserted">Expand</span><span class="ng-star-inserted"> in the control panel to convert the trace into vector paths.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">Apply the </span><span class="inline-code ng-star-inserted">Offset Path</span><span class="ng-star-inserted"> function as described above to create the final cut-line, then delete the initial trace path.</span></p>
+</li>
+</ol>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Group each artwork with its corresponding cut-line. The cut-line should sit on top of the print data within the group hierarchy.</span></p>
+<h2 class="ng-star-inserted"><span class="ng-star-inserted">Phase 2: True-Shape Nesting Strategies</span></h2>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Once your assets are grouped (Print + Cut + Marks), you must pack them into the production artboard. Arrange Master uses a background Chromium Math Engine to evaluate the exact vector geometry of the cut-lines, calculating the optimal interlocking placement.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Select your asset groups and your container path, then open the </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Greedy Layout</span></strong><span class="ng-star-inserted"> or </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Shape Respect</span></strong><span class="ng-star-inserted"> tab in Arrange Master. Ensure the </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Dense Packing</span></strong><span class="ng-star-inserted"> checkbox is enabled to activate the true-shape nesting engine.</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Configure the parameters based on your specific manufacturing hardware:</span></p>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">A. Print Shops (Roll Plotters)</span></h3>
+<figure class="post__image"><figure class="post__image"><img loading="lazy"  src="https://blog.andrewr.online/media/posts/10/Snimok-ekrana-2026-08-16-154541.png" alt="Dense true-shape nesting of colorful sticker graphics on a print sheet created with the Arrange Master plugin." width="1674" height="931" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-154541-xs.png 640w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-154541-sm.png 768w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-154541-md.png 1024w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-154541-lg.png 1366w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-154541-xl.png 1600w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-154541-2xl.png 1920w"></figure>
+<figcaption>Print-and-cut optimization. Hundreds of irregular sticker designs packed tightly using True-Shape Nesting to minimize vinyl waste.</figcaption>
+</figure>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Wide-format printers require the layout to consume the minimum possible length of the media roll.</span></p>
+<ul class="ng-star-inserted">
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Vector Gravity:</span></strong><span class="ng-star-inserted"> Enable </span><strong class="ng-star-inserted"><span class="ng-star-inserted">Y-Gravitation</span></strong><span class="ng-star-inserted">. The algorithm forces objects horizontally (Left-to-Right), keeping the print job as short as possible along the Y-axis.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Rotation:</span></strong><span class="ng-star-inserted"> Enable </span><strong class="ng-star-inserted"><span class="ng-star-inserted">90° Turn</span></strong><span class="ng-star-inserted">. Orthogonal rotation provides high density without distorting text or recognizable print elements.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Spacing:</span></strong><span class="ng-star-inserted"> Set </span><span class="inline-code ng-star-inserted">Min. Spacing</span><span class="ng-star-inserted"> to your hardware's safe tolerance (e.g., </span><span class="inline-code ng-star-inserted">2 mm</span><span class="ng-star-inserted">).</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Evolution Stepper:</span></strong><span class="ng-star-inserted"> Set between </span><span class="inline-code ng-star-inserted">5</span><span class="ng-star-inserted"> and </span><span class="inline-code ng-star-inserted">10</span><span class="ng-star-inserted"> generations for fast processing on large datasets (500+ items).</span></p>
+</li>
+</ul>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">B. Laser Cutting and CNC</span></h3>
+<figure class="post__image"><figure class="post__image"><img loading="lazy"  src="https://blog.andrewr.online/media/posts/10/Snimok-ekrana-2026-08-16-155056.png" alt="Precision true-shape nesting of mechanical vector parts for laser cutting and CNC machining in Adobe Illustrator." width="1703" height="977" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-155056-xs.png 640w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-155056-sm.png 768w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-155056-md.png 1024w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-155056-lg.png 1366w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-155056-xl.png 1600w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-155056-2xl.png 1920w"></figure>
+<figcaption>High-density layout for CNC and laser cutting. Complex mechanical parts nested using Dual Gravity and 360° rotation.</figcaption>
+</figure>
+<p class="ng-star-inserted"><span class="ng-star-inserted">CNC machining handles rigid materials (wood, acrylic, metal) where minimizing total sheet waste is the primary metric.</span></p>
+<ul class="ng-star-inserted">
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Vector Gravity:</span></strong><span class="ng-star-inserted"> Enable </span><strong class="ng-star-inserted"><span class="ng-star-inserted">X/Y-Gravity</span></strong><span class="ng-star-inserted"> (Dual Gravity). The algorithm pulls objects diagonally toward the origin corner, eliminating internal cavities and forming a highly compressed block.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Rotation:</span></strong><span class="ng-star-inserted"> Enable </span><strong class="ng-star-inserted"><span class="ng-star-inserted">360° Turn</span></strong><span class="ng-star-inserted">. The engine evaluates 24 different angles for every part, interlocking complex mechanical components perfectly.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Evolution Stepper:</span></strong><span class="ng-star-inserted"> Set between </span><span class="inline-code ng-star-inserted">15</span><span class="ng-star-inserted"> and </span><span class="inline-code ng-star-inserted">25</span><span class="ng-star-inserted"> generations to force the genetic algorithm to calculate deeper mutation sequences for maximum density.</span></p>
+</li>
+</ul>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">C. Textile and Apparel Design</span></h3>
+<figure class="post__image"><figure class="post__image"><img loading="lazy"  src="https://blog.andrewr.online/media/posts/10/Snimok-ekrana-2026-08-16-160203.png" alt="Apparel pattern pieces nested with a 180-degree flip constraint to maintain fabric grainline in Adobe Illustrator." width="1682" height="707" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-160203-xs.png 640w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-160203-sm.png 768w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-160203-md.png 1024w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-160203-lg.png 1366w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-160203-xl.png 1600w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-160203-2xl.png 1920w"></figure>
+<figcaption>Textile layout. Garment patterns packed using 180° Turn to preserve the fabric's vertical grainline and elasticity.</figcaption>
+</figure>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Fabric printing and cutting must account for the material's grainline (the direction of the woven threads) to maintain proper elasticity in the final garment.</span></p>
+<ul class="ng-star-inserted">
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Vector Gravity:</span></strong><span class="ng-star-inserted"> </span><strong class="ng-star-inserted"><span class="ng-star-inserted">X-Gravitation</span></strong><span class="ng-star-inserted"> (Top-Down).</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">Rotation:</span></strong><span class="ng-star-inserted"> Enable </span><strong class="ng-star-inserted"><span class="ng-star-inserted">180° Turn</span></strong><span class="ng-star-inserted">. This allows the algorithm to flip patterns upside down to save space, but strictly prevents 90-degree or free rotations, preserving the structural grainline of the fabric.</span></p>
+</li>
+</ul>
+<h2 class="ng-star-inserted"><span class="ng-star-inserted">Phase 3: Automated Layer Distribution</span></h2>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Arrange Master nests your items mathematically. However, RIP (Raster Image Processor) software requires specific data to be isolated on dedicated layers (e.g., a layer strictly for vectors, a layer strictly for rasters).</span></p>
+<p class="ng-star-inserted"><span class="ng-star-inserted">Manual separation of 500 nested groups breaks production timelines. To resolve this, the Arrange Master package includes a companion script: </span><span class="inline-code ng-star-inserted">Prepress-Splitter.jsx</span><span class="ng-star-inserted">.</span></p>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">Executing the Prepress Splitter</span></h3>
+<figure class="post__image"><img loading="lazy"  src="https://blog.andrewr.online/media/posts/10/documentation_screenshot_017.png" alt="" width="1465" height="1000" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/10/responsive/documentation_screenshot_017-xs.png 640w ,https://blog.andrewr.online/media/posts/10/responsive/documentation_screenshot_017-sm.png 768w ,https://blog.andrewr.online/media/posts/10/responsive/documentation_screenshot_017-md.png 1024w ,https://blog.andrewr.online/media/posts/10/responsive/documentation_screenshot_017-lg.png 1366w ,https://blog.andrewr.online/media/posts/10/responsive/documentation_screenshot_017-xl.png 1600w ,https://blog.andrewr.online/media/posts/10/responsive/documentation_screenshot_017-2xl.png 1920w"></figure>
+<p class="ng-star-inserted"><span class="ng-star-inserted">After finalizing your layout in Arrange Master (clicking </span><span class="inline-code ng-star-inserted">Ok</span><span class="ng-star-inserted"> to end the session):</span></p>
+<ol class="ng-star-inserted">
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">Select all the nested groups on your artboard.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">Navigate to </span><span class="inline-code ng-star-inserted">File &gt; Scripts &gt; Other Script...</span><span class="ng-star-inserted"> and execute the </span><span class="inline-code ng-star-inserted">Prepress-Splitter.jsx</span><span class="ng-star-inserted"> file.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><span class="ng-star-inserted">A dialog box will appear. Select the required target layers.</span></p>
+</li>
+</ol>
+<h3 class="ng-star-inserted"><span class="ng-star-inserted">How the Splitter Distributes Entities</span></h3>
+<figure class="post__image"><figure class="post__image"><img loading="lazy"  src="https://blog.andrewr.online/media/posts/10/Snimok-ekrana-2026-08-16-160608.png" alt="Prepress Splitter script result showing automated separation of nested objects into CUT, PRINT, and QR layers." width="1959" height="880" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-160608-xs.png 640w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-160608-sm.png 768w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-160608-md.png 1024w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-160608-lg.png 1366w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-160608-xl.png 1600w ,https://blog.andrewr.online/media/posts/10/responsive/Snimok-ekrana-2026-08-16-160608-2xl.png 1920w"></figure>
+<figcaption>Automated layer separation result from the Prepress Splitter script, distributing nested stickers into dedicated CUT, PRINT, and QR layers.</figcaption>
+</figure>
+<p class="ng-star-inserted"><span class="ng-star-inserted">The script parses the internal DOM structure of every selected group and routes the components to specific layers based on object type:</span></p>
+<ul class="ng-star-inserted">
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">CUT Layer:</span></strong><span class="ng-star-inserted"> The script isolates the top vector path (or clipping mask) of the group, enforces a 100% Magenta stroke, and moves it here.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">PRINT Layer:</span></strong><span class="ng-star-inserted"> The script identifies the base raster image or embedded file and routes it to this layer.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">QR Layer (PRINT 2):</span></strong><span class="ng-star-inserted"> Any secondary raster elements stacked above the base image (like variable QR codes or spot varnish data) are isolated here.</span></p>
+</li>
+<li class="ng-star-inserted">
+<p class="ng-star-inserted"><strong class="ng-star-inserted"><span class="ng-star-inserted">MARKS Layer:</span></strong><span class="ng-star-inserted"> Auxiliary vector elements not functioning as cut contours are sorted into this layer.</span></p>
+</li>
+</ul>
+<p class="ng-star-inserted"><span class="ng-star-inserted">The original groups are deleted, leaving a clean, production-ready document formatted precisely for prepress software.</span></p>
+<p class="ng-star-inserted"> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Workflow Automation for Microstock Contributors</title>
         <author>
