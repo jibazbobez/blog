@@ -45,6 +45,46 @@
 </image:image>
 </url>
 <url>
+<loc>https://blog.andrewr.online/arrange-master-150-genetic-algorithm-dense-packing.html</loc>
+<lastmod>2026-09-19T20:17:34+05:00</lastmod>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/11/Snimok-ekrana-2026-09-19-194723-2.png</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/11/Snimok-ekrana-2026-09-19-174023-4.png</image:loc>
+<image:title><![CDATA[Genetic Algorithm comparison between Arrange Master 1.4.5 at Evolution 50 and version 1.5.0 at Evolution 1]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/11/Snimok-ekrana-2026-09-19-174058-2.png</image:loc>
+<image:title><![CDATA[X/Y-Gravity nesting comparison at Evolution Stepper 1 and 15 in Arrange Master]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/11/Snimok-ekrana-2026-09-19-190136-2.png</image:loc>
+<image:title><![CDATA[Dense Packing comparison showing 10% less occupied area after container compression in Arrange Master 1.5.0]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/11/Snimok-ekrana-2026-09-19-185826-2.png</image:loc>
+<image:title><![CDATA[X-Gravity and Y-Gravity forming compact vector layouts with aligned final edges]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/11/Snimok-ekrana-2026-09-19-190004-2.png</image:loc>
+<image:title><![CDATA[360° Turn comparison showing improved rotation and clustering of vector objects in Arrange Master 1.5.0]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/11/Snimok-ekrana-2026-09-19-185919-2.png</image:loc>
+<image:title><![CDATA[Single Item Fill comparison showing 61 objects in Arrange Master 1.4.5 and 64 objects in version 1.5.0]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/11/Snimok-ekrana-2026-09-19-190235-2.png</image:loc>
+<image:title><![CDATA[Arrange Master Single Item Fill showing four shape-based vector packing patterns]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://blog.andrewr.online/media/posts/11/Snimok-ekrana-2026-09-19-192355-2.png</image:loc>
+<image:title><![CDATA[Shape Respect Layout nesting vector artwork inside a grouped container with three shapes]]></image:title>
+</image:image>
+</url>
+<url>
 <loc>https://blog.andrewr.online/arrange-master-microstock-workflow-automation.html</loc>
 <lastmod>2026-08-06T03:22:10+05:00</lastmod>
 <image:image>
@@ -215,6 +255,10 @@
 <image:loc>https://blog.andrewr.online/media/posts/1/Snimok-ekrana-2026-05-07-212823.png</image:loc>
 <image:title><![CDATA[Comparison of a sticker sheet layout in Illustrator. The left image shows arrangement based on bounding boxes with large gaps. The right image shows True-Shape Nesting where irregular shapes fit into each other, leaving more free space at the bottom of the sheet.]]></image:title>
 </image:image>
+</url>
+<url>
+<loc>https://blog.andrewr.online/tutorial-how-i-get-tighter-nesting-results-in-arrange-master.html</loc>
+<lastmod>2026-09-19T19:26:53+05:00</lastmod>
 </url>
 <url>
 <loc>https://blog.andrewr.online/vector-gravity-and-genetic-packing-inside-arrange-master-14.html</loc>
